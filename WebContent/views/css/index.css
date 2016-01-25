@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+.heightFill {
+	height: 100%;
+}
+
+.sidebar {
+	position: fixed;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: block;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #3e77ab;
+	border-right: 1px solid #eee;
+}
+
+.nav {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.nav-sidebar {
+	margin-right: -21px;
+	margin-bottom: 20px;
+	margin-left: -20px;
+}
+
+.nav>li {
+	position: relative;
+	display: block;
+}
+
+.nav>li>a {
+	font-family: Microsoft YaHei;
+	color:#000;
+	position: relative;
+	display: block;
+	padding: 10px 15px;	
+    background-color: transparent;
+}
