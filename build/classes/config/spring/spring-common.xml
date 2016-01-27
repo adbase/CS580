@@ -9,7 +9,7 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://127.0.0.1:3306/cs580"></property>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/cs580?useSSL=false"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="root"></property>
 	</bean>
@@ -35,7 +35,7 @@
 
 	<!-- 配置一个事务管理器 -->
 	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 

@@ -10,32 +10,21 @@ html, body {
 .heightFill {
 	height: 100%;
 }
-
+.content{
+	position: inherit;
+    margin: 0 0 0 250px;
+    padding: 0 30px;
+    margin-top: 51px; 
+}
 .sidebar {
-	position: fixed;
-	top: 50px;
-	bottom: 0;
-	left: 0;
-	z-index: 1000;
-	display: block;
-	padding: 20px;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background-color: #3e77ab;
-	border-right: 1px solid #eee;
+	z-index: 1;
+    position: absolute;
+    width: 250px;
+    margin-top: 51px;
+    padding:0;
 }
 
-.nav {
-	padding-left: 0;
-	margin-bottom: 0;
-	list-style: none;
-}
 
-.nav-sidebar {
-	margin-right: -21px;
-	margin-bottom: 20px;
-	margin-left: -20px;
-}
 
 .nav>li {
 	position: relative;
@@ -44,9 +33,14 @@ html, body {
 
 .nav>li>a {
 	font-family: Microsoft YaHei;
-	color:#000;
+	color: #337ab7;
 	position: relative;
 	display: block;
-	padding: 10px 15px;	
-    background-color: transparent;
+	padding: 10px 15px;
+	background-color: transparent;
+}
+
+.pull-center {
+	margin-left: 10px;
+	vertical-align: middle;
 }

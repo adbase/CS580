@@ -16,7 +16,7 @@
     <!-- 开启注解 -->  
     <mvc:annotation-driven />  
       
-    <!-- 静态资源(js/image)的访问 -->  
+    <!-- 静态资源 -->  
     <mvc:resources location="/views/js" mapping="/javascript/**"/>  
     <mvc:resources location="/views/css" mapping="/styles/**"/> 
     <mvc:resources location="/views/fonts" mapping="/fonts/**"/>
