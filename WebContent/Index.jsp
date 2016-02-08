@@ -4,6 +4,7 @@
 
 <head>
 <title>TMS</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link type="text/css" href="views/css/bootstrap.min.css"
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css"

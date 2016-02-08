@@ -21,6 +21,8 @@ public class UserController {
 
 		userManager.addUser(user);
 
-		return "redirect:/user/getAllUser";
+		return "/Index";
 	}
+	
+	
 }
