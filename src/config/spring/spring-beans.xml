@@ -5,18 +5,84 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans   
 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-	<bean id="userDao" class="com.dao.UserDaoImpl">
+	<!-- DAO -->
+	<bean id="userDao" class="com.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="organizationDao" class="com.dao.impl.OrganizationDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="tripDao" class="com.dao.impl.TripDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="partnerCompanyDao" class="com.dao.impl.PartnerCompanyDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="vehicleDao" class="com.dao.impl.VehicleDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="guideDao" class="com.dao.impl.GuideDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
+	<bean id="tripstepDao" class="com.dao.impl.TripstepDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+	<!-- manager -->
 	<bean id="userManagerBase" class="com.manager.UserManagerImpl">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
+	<bean id="organizationManagerBase" class="com.manager.impl.OrganizationManagerImpl">
+		<property name="organizationDao" ref="organizationDao"></property>
+	</bean>
+	<bean id="tripManagerBase" class="com.manager.impl.TripManagerImpl">
+		<property name="tripDao" ref="tripDao"></property>
+	</bean>
+	<bean id="partnerCompanyManagerBase" class="com.manager.impl.PartnerCompanyManagerImpl">
+		<property name="partnerCompanyDao" ref="partnerCompanyDao"></property>
+	</bean>
+	<bean id="vehicleManagerBase" class="com.manager.impl.VehicleManagerImpl">
+		<property name="vehicleDao" ref="vehicleDao"></property>
+	</bean>
+	<bean id="guideManagerBase" class="com.manager.impl.GuideManagerImpl">
+		<property name="guideDao" ref="guideDao"></property>
+	</bean>
+	<bean id="tripstepManagerBase" class="com.manager.impl.TripstepManagerImpl">
+		<property name="tripstepDao" ref="tripstepDao"></property>
+	</bean>
 
-	<!-- 此处为代理 -->
+
+	<!-- managerproxy -->
 	<bean name="userManager" parent="transactionProxy">
 		<property name="target" ref="userManagerBase"></property>
 	</bean>
 
+	<bean name="organizationManager" parent="transactionProxy">
+		<property name="target" ref="organizationManagerBase"></property>
+	</bean>
+
+	<bean name="tripManager" parent="transactionProxy">
+		<property name="target" ref="tripManagerBase"></property>
+	</bean>
+
+	<bean name="partnerCompanyManager" parent="transactionProxy">
+		<property name="target" ref="partnerCompanyManagerBase"></property>
+	</bean>
+
+	<bean name="vehicleManager" parent="transactionProxy">
+		<property name="target" ref="vehicleManagerBase"></property>
+	</bean>
+	<bean name="guideManager" parent="transactionProxy">
+		<property name="target" ref="guideManagerBase"></property>
+	</bean>
+	<bean name="tripstepManager" parent="transactionProxy">
+		<property name="target" ref="tripstepManagerBase"></property>
+	</bean>
 </beans>

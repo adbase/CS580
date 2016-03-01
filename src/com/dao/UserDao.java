@@ -2,6 +2,7 @@ package com.dao;
 
 import java.util.List;
 
+import com.entity.Children;
 import com.entity.User;
 
 public interface UserDao {
@@ -14,4 +15,6 @@ public interface UserDao {
 	public boolean delUser(String id);
 
 	public boolean updateUser(User user);
+	
+	public void addChildren(List<Children> children);
 }

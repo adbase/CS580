@@ -3,6 +3,7 @@ package com.manager;
 import java.util.List;
 
 import com.dao.UserDao;
+import com.entity.Children;
 import com.entity.User;
 
 public class UserManagerImpl implements UserManager {
@@ -37,4 +38,8 @@ public class UserManagerImpl implements UserManager {
     public boolean updateUser(User user) {  
         return userDao.updateUser(user);  
     }  
+    @Override  
+    public void addChildren(List<Children> children){
+    	userDao.addChildren(children);
+    }
 }

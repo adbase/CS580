@@ -3,8 +3,11 @@ package com.dao;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
+import com.entity.Children;
 import com.entity.User;
 
 public class UserDaoImpl implements UserDao  {
@@ -58,5 +61,20 @@ public class UserDaoImpl implements UserDao  {
 		query.setString(2, user.getId());
 
 		return (query.executeUpdate() > 0);
+	}
+
+	@Override
+	public void addChildren(List<Children> children) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		
+		for(int i=0;i<children.size();i++){
+			Children temp = children.get(i);
+			session.save(temp);
+			if ( i % 10 == 0 ){
+				session.flush();          
+				session.clear();
+			}
+		}
 	}
 }

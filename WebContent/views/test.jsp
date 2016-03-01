@@ -6,14 +6,11 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-12">
-		<form action="" name="TravllingForm" role="form">
+	<div class="col-lg-12" ng-controller="CreateProcessingController as ctrl">
+		<form ng-submit="ctrl.submit()" name="TravllingForm" >
 			<div class="panel panel-default">
 				<div class="panel-heading">组团社信息</div>
 				<div class="panel-body">
-
-
-
 
 					<div class="form-horizontal">
 						<div class="form-group">
@@ -30,11 +27,8 @@
 						<div class="form-group">
 							<lable class="col-sm-2 control-label panel-lable">*组团社</lable>
 							<div class="col-sm-3">
-								<select class="form-control">
-									<option>途风</option>
-									<option>佳辰旅游</option>
-									<option>美亚</option>
-									<option>JSC</option>
+								<select class="form-control"  ng-model="org1" >
+									<option ng-repeat="value in proController.processings" value="{{value.name}}">{{value.name}}</option>
 								</select>
 							</div>
 							<lable class="col-sm-2 control-label panel-lable">*发团OP</lable>
@@ -48,18 +42,18 @@
 						<div class="form-group">
 							<lable class="col-sm-2 control-label panel-lable">*团号</lable>
 							<div class="col-sm-3">
-								<input class="form-control"> </input>
+								<input type="text" class="form-control input-sm" ng-model="trip.id"> </input>
 								<p class="help-block panel-lable-help">我社团号</p>
 							</div>
 							<div class="col-sm-3">
-								<input class="form-control"> </input>
+								<input type="text" class="form-control" ng-model="trip.Organization_id"> </input>
 								<p class="help-block panel-lable-help">组团社原始团号</p>
 							</div>
 						</div>
 						<div class="form-group">
 							<lable class="col-sm-2 control-label panel-lable">*联系人</lable>
 							<div class="col-sm-3">
-								<input class="form-control"> </input>
+								<input type="text" class="form-control"  ng-model="trip.contact"> </input>
 								<p class="help-block panel-lable-help">我社操团人</p>
 							</div>
 							<lable class="col-sm-2 control-label panel-lable">*地接社</lable>
@@ -74,7 +68,7 @@
 						<div class="form-group">
 							<lable class="col-sm-2 control-label panel-lable">*电话</lable>
 							<div class="col-sm-3">
-								<input class="form-control"> </input>
+								<input type="text" class="form-control" ng-model="trip.phone"> </input>
 								<p class="help-block panel-lable-help">我社操团人</p>
 							</div>
 							<lable class="col-sm-2 control-label panel-lable">*地接社OP</lable>
@@ -88,7 +82,7 @@
 						<div class="form-group">
 							<lable class="col-sm-2 control-label panel-lable">邮件</lable>
 							<div class="col-sm-3">
-								<input class="form-control"> </input>
+								<input type="text" class="form-control"  ng-model="trip.email"> </input>
 								<p class="help-block panel-lable-help">我社操团人</p>
 							</div>
 						</div>
@@ -296,6 +290,7 @@
 					</table>
 				</div>
 			</div>
+			<input type="submit"  value="{{!ctrl.trip.id ? '添加行程' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="TravllingForm.$invalid">
 		</form>
 	</div>
 </div>
