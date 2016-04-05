@@ -84,7 +84,7 @@ App.controller('partnerCompanyController', ["$scope", "$uibModal", "$http",'$sta
 	$scope.remove = function(id) {
 		
 
-		$http.delete('/CS580/deletePartnerCompany/'+id)
+		$http.delete('/TMS/deletePartnerCompany/'+id)
 		.then(
                 function(response){
                 	$scope.companies = ParnterCompanyService.searchAllCompanyByType(type)
@@ -118,7 +118,7 @@ App.controller('partnerCompanyController', ["$scope", "$uibModal", "$http",'$sta
 	};
 	$scope.addCompany = function() {
 		if($scope.company.name!=''){
-			$http.post('/CS580/addNewPartnerCompany',$scope.company)
+			$http.post('/TMS/addNewPartnerCompany',$scope.company)
 			.success(function(response){
 				$uibModalInstance.close($scope.company.type);
 			}).error(function(errResponse){
@@ -138,7 +138,7 @@ App.controller('partnerCompanyController', ["$scope", "$uibModal", "$http",'$sta
 	
 	$scope.updateCompany = function(){
 		if($scope.company.name!=''){
-			$http.post('/CS580/updatePartnerCompany',$scope.company)
+			$http.post('/TMS/updatePartnerCompany',$scope.company)
 			.success(function(response){
 				$uibModalInstance.close($scope.company.type);
 			}).error(function(errResponse){

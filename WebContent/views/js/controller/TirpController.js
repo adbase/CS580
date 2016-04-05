@@ -6,7 +6,9 @@ App.controller('TripController', ["$scope", "$uibModal", "$http",'$state','async
 	
 	$scope.trips = async;
 	
-
+	$scope.edit = function(){
+		alert(1);
+	}
 }])
 
 //新建行程
@@ -37,14 +39,15 @@ App.controller('addTripController', ["$scope", "$uibModal", "$http",'$state','gu
 	}
 	$scope.localPartner = localPartner;
 	$scope.guides =guides;
-	//generate a array containing the people belongs our company. 
+	/*//generate a array containing the people belongs our company. 
 	$scope.myGuides = [];
 	for(var i=0; i<$scope.guides.length; i++){
 		//alert(JSON.stringify());
-		if($scope.guides[i].companyid=='2016-2-28 9:30:07'){
+		if($scope.guides[i].companyid==$scope.trip.contact){
 			$scope.myGuides.push($scope.guides[i]);
 		}
-	}
+	}*/
+	var mycompanyID;
 	//update phone number value according the choice of the op
 	$scope.updatePhone = function(){
 		
@@ -52,7 +55,7 @@ App.controller('addTripController', ["$scope", "$uibModal", "$http",'$state','gu
 			//alert(JSON.stringify());
 			if($scope.guides[i].id==$scope.trip.contact){
 				$scope.trip.phone = $scope.guides[i].phone;
-				
+				mycompanyID = $scope.guides[i].id;
 			}
 		}
 	};
@@ -61,7 +64,7 @@ App.controller('addTripController', ["$scope", "$uibModal", "$http",'$state','gu
 	$scope.localguides =[];
 	$scope.localcompany =[];
 	for(var i=0; i<$scope.localPartner.length; i++){
-		if($scope.localPartner[i].id!='2016-2-28 9:30:07'){
+		if($scope.localPartner[i].id!=$scope.mycompanyID){
 			$scope.localcompany.push($scope.localPartner[i]);
 		}
 	}
@@ -231,9 +234,9 @@ App.controller('addTripController', ["$scope", "$uibModal", "$http",'$state','gu
 	
 	//submit
 	$scope.submit = function(){
-		$http.post('/CS580/addTrip',$scope.trip)
+		$http.post('/TMS/addTrip',$scope.trip)
 		.success(function(response){
-			$http.post('/CS580/addTripsteps',$scope.tripsteps)
+			$http.post('/TMS/addTripsteps',$scope.tripsteps)
 			.success(function(response){
 				$state.go("listTrip");
 			})

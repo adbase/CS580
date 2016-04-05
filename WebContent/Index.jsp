@@ -5,9 +5,11 @@
 <head>
 <title>TMS</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
 <link type="text/css" href="views/css/bootstrap.min.css"
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="views/css/index.css">
+<link rel="stylesheet"  type="text/css" href="views/css/animate.css">
 
 <script src="views/js/angular.js"></script>
 <script src="views/js/angular-ui-router.js"></script>
@@ -34,34 +36,60 @@
 </head>
 <body data-ng-app="myApp">
 
-	<nav class="navbar navbar-fixed-top  navbar-inverse"></nav>
+	<div class="navbar navbar-fixed-top header">
+		 <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+					
+				</div>
+	           <div class="col-md-5">
+	           		
+	           </div>
+	           <div class="col-md-2">
+	           		<div class="navbar navbar-inverse" role="banner">
+	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	                    <ul class="nav navbar-nav">
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的账户 <b class="caret"></b></a>
+	                        <ul class="dropdown-menu animated fadeInUp">
+	                          <li><a href="">账户</a></li>
+	                          <li><a href="">登出</a></li>
+	                        </ul>
+	                      </li>
+	                    </ul>
+	                  </nav>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
 	<div class="container-fluid heightFill">
 		<div class="row heightFill">
 			<!-- Navigation -->
 			<div class="col-xs12 col-md-2 heightFill sidebar">
 
 				<ul class="nav nav-sidebar navbar-default heightFill">
-					<li ui-sref="listTrip" ><a href=""> <span class="glyphicon glyphicon-calendar"></span><span
+					<li ui-sref="listTrip" ><a href=""> <i class="glyphicon glyphicon-calendar"></i><span
 							class="pull-center ">行程管理</span>
 					</a></li>
-					<li data-toggle="collapse" data-target="#partnerCompany"><a href="#"><span
-							class="glyphicon glyphicon-briefcase collapsed active"></span><span
+					<li data-toggle="collapse" data-target="#partnerCompany"><a href="#"><i
+							class="glyphicon glyphicon-briefcase collapsed active"></i><span
 							class="pull-center">供应商管理 </span> </a>
-					</li>
-					 <ul class="sub-menu collapse in" id="partnerCompany">
-					 	<li ui-sref="vehicleCompany"><a href="#"><span class="pull-center">车辆供应商 </span> </a></li>
-					 	<li ui-sref="hotelCompany"><a href="#"><span class="pull-center">酒店供应商 </span> </a></li>
-					 	<li ui-sref="flightCompany"><a href="#"><span class="pull-center">机票供应商 </span> </a></li>
-					 	<li ui-sref="localCompany"><a href="#"><span class="pull-center">旅行社 </span> </a></li>
-					 </ul>
+					
+						 <ul class="sub-menu collapse" id="partnerCompany">
+						 	<li ui-sref="vehicleCompany"><a href="#"><span class="pull-center">车辆供应商 </span> </a></li>
+						 	<li ui-sref="hotelCompany"><a href="#"><span class="pull-center">酒店供应商 </span> </a></li>
+						 	<li ui-sref="flightCompany"><a href="#"><span class="pull-center">机票供应商 </span> </a></li>
+						 	<li ui-sref="localCompany"><a href="#"><span class="pull-center">旅行社 </span> </a></li>
+						 </ul>
+					</li>	
 							
-							
-					<li  ui-sref="vehicleManagement"><a href="#"><span class="glyphicon glyphicon-road"></span><span
+					<li  ui-sref="vehicleManagement"><a href="#"><i class="glyphicon glyphicon-road"></i><span
 							class="pull-center">车辆管理 </span></a></li>
-					<li ui-sref="guideManagement"><a href="#"><span
-							class="glyphicon glyphicon-user"></span><span class="pull-center">人员管理</span>
+					<li ui-sref="guideManagement"><a href="#"><i
+							class="glyphicon glyphicon-user"></i><span class="pull-center">人员管理</span>
 					</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-cog"></span><span
+					<li><a href="#"><i class="glyphicon glyphicon-cog"></i><span
 							class="pull-center">系统管理</span></a></li>
 
 				</ul>

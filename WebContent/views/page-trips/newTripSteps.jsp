@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<div class="modal-header">添加车辆</div>
+<div class="modal-header">添加日程</div>
 <div class="modal-body">
 	<div class="form-horizontal">
 		<div class="form-group">

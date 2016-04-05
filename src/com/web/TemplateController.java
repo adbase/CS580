@@ -11,6 +11,7 @@ public class TemplateController {
 	}
 	 @RequestMapping(value="/listTrip")
 	 public String getTrips(){
+		 System.out.println("test");
 		 return "views/page-trips/list";
 	 }
 	 
@@ -65,4 +66,6 @@ public class TemplateController {
 	 public String searchusers(){
 		 return "views/t2";
 	 }
+	 
+	
 }

@@ -6,7 +6,7 @@ App.factory('ParnterCompanyService', ['$http', '$q', function($http, $q){
 	return {
 		
 		searchAllCompanyByType : function(type){
-			 return $http.get('/CS580/searchAllCompany/'+type)
+			 return $http.get('/TMS/searchAllCompany/'+type)
 			   .then(
 				   function(response){	
 	                   return response.data;
@@ -18,7 +18,7 @@ App.factory('ParnterCompanyService', ['$http', '$q', function($http, $q){
 			   );
 		},
 		createID: function(){
-			return $http.get('/CS580/createNewPartnerCompanyID')
+			return $http.get('/TMS/createNewPartnerCompanyID')
 			 .then(
 					   function(response){
 						   return response.data;

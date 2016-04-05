@@ -100,7 +100,7 @@ App.controller('guideController', ["$scope", "$uibModal", "$http",'$state','asyn
 	$scope.remove = function(id) {
 		
 
-		$http.delete('/CS580/deleteGuide/'+id)
+		$http.delete('/TMS/deleteGuide/'+id)
 		.then(
                 function(response){
                 	$scope.guides = GuideService.searchAllGuides()
@@ -143,7 +143,7 @@ App.controller('guideController', ["$scope", "$uibModal", "$http",'$state','asyn
 	$scope.add = function() {
 		//alert(JSON.stringify($scope.guide));
 		if($scope.guide.name_chn!=''){
-			$http.post('/CS580/addNewGuide',$scope.guide)
+			$http.post('/TMS/addNewGuide',$scope.guide)
 			.success(function(response){
 				$uibModalInstance.close($scope.guide);
 			}).error(function(errResponse){
@@ -165,7 +165,7 @@ App.controller('guideController', ["$scope", "$uibModal", "$http",'$state','asyn
 	$scope.partners=partnerCompany;
 	$scope.update = function(){
 		if($scope.guide.companyid!=''){
-			$http.post('/CS580/updateGuide',$scope.guide)
+			$http.post('/TMS/updateGuide',$scope.guide)
 			.success(function(response){
 				$uibModalInstance.close($scope.guide);
 			}).error(function(errResponse){

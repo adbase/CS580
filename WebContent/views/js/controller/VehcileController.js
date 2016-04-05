@@ -101,7 +101,7 @@ App.controller('vehcileController', ["$scope", "$uibModal", "$http",'$state','as
 	$scope.remove = function(id) {
 		
 
-		$http.delete('/CS580/deleteVehicle/'+id)
+		$http.delete('/TMS/deleteVehicle/'+id)
 		.then(
                 function(response){
                 	$scope.vehciles = VechileService.searchAllVechile()
@@ -141,7 +141,7 @@ App.controller('vehcileController', ["$scope", "$uibModal", "$http",'$state','as
 	$scope.partners=partnerCompany;
 	$scope.add = function() {
 		if($scope.vehicle.v_type!=''){
-			$http.post('/CS580/addNewVehicle',$scope.vehicle)
+			$http.post('/TMS/addNewVehicle',$scope.vehicle)
 			.success(function(response){
 				$uibModalInstance.close($scope.vehicle);
 			}).error(function(errResponse){
@@ -163,7 +163,7 @@ App.controller('vehcileController', ["$scope", "$uibModal", "$http",'$state','as
 	$scope.partners=partnerCompany;
 	$scope.update = function(){
 		if($scope.vehicle.companyid!=''){
-			$http.post('/CS580/updateVehicle',$scope.vehicle)
+			$http.post('/TMS/updateVehicle',$scope.vehicle)
 			.success(function(response){
 				$uibModalInstance.close($scope.vehicle);
 			}).error(function(errResponse){

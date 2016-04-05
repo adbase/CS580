@@ -4,7 +4,7 @@
 App.factory('VechileService', ['$http', '$q', function($http, $q){
 	return {
 		searchAllVechile : function(){
-			return $http.get('/CS580/searchAllVechile')
+			return $http.get('/TMS/searchAllVechile')
 			   .then(
 				   function(response){	
 	                   return response.data;

@@ -41,7 +41,7 @@
 							<lable class="col-sm-2 control-label panel-lable">*我团OP</lable>
 							<div class="col-sm-3">
 								<select class="form-control" ng-model="trip.contact"
-									ng-options="m.id as m.name_chn for m in myGuides"
+									ng-options="m.id as m.name_chn for m in guides"
 									ng-change="updatePhone()">
 								</select>
 							</div>

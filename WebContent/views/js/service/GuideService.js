@@ -4,7 +4,7 @@
 App.factory('GuideService', ['$http', '$q', function($http, $q){
 	return {
 		searchAllGuides : function(){
-			return $http.get('/CS580/searchAllGuides')
+			return $http.get('/TMS/searchAllGuides')
 			   .then(
 				   function(response){	
 	                   return response.data;

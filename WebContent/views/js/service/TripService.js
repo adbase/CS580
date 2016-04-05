@@ -4,7 +4,7 @@
 App.factory('TripService', ['$http', '$q', function($http, $q){
 	return{
 		fetchProcessingList: function() {
-			return $http.get('/CS580/searchAllTrips')
+			return $http.get('/TMS/searchAllTrips')
 			.then(
 					function(response){
 						
@@ -17,7 +17,7 @@ App.factory('TripService', ['$http', '$q', function($http, $q){
 				);
 		},
 		getInitDate: function(){
-			return $http.get('/CS580/getInitDate')
+			return $http.get('/TMS/getInitDate')
 			.then(
 					function(response){
 						
@@ -31,7 +31,7 @@ App.factory('TripService', ['$http', '$q', function($http, $q){
 					
 		},
 		createTrip: function(trip){
-			return $http.post('/CS580/createTrip',trip)
+			return $http.post('/TMS/createTrip',trip)
 			.then(
 					function(response){
 						
@@ -44,7 +44,7 @@ App.factory('TripService', ['$http', '$q', function($http, $q){
 			);
 		},
 		createTripstep: function(tripstep){
-			return $http.post('/CS580/createTripstep',tripstep)
+			return $http.post('/TMS/createTripstep',tripstep)
 			.then(
 					function(response){
 						
