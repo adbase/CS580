@@ -14,7 +14,7 @@
 <script src="views/js/angular.js"></script>
 <script src="views/js/angular-ui-router.js"></script>
 <script src="views/js/ui-bootstrap-tpls.js"></script>
-<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="views/js//jquery-2.2.3.min.js"></script>
 <script src="views/js/bootstrap.min.js"></script>
 <script src="views/js/bootstrap-datetimepicker.min.js"></script>
 <script src="views/js/router/indexrouter.js"></script>
@@ -84,8 +84,18 @@
 						 </ul>
 					</li>	
 							
-					<li  ui-sref="vehicleManagement"><a href="#"><i class="glyphicon glyphicon-road"></i><span
-							class="pull-center">车辆管理 </span></a></li>
+					<li data-toggle="collapse" data-target="#vehicle"><a href="#"><i
+							class="glyphicon glyphicon-road collapsed active"></i><span
+							class="pull-center">车辆管理 </span> </a>
+							<ul class="sub-menu collapse" id="vehicle">
+								<li  ui-sref="vehicleManagement">
+									<a href="#">
+									</i><span class="pull-center">车辆信息管理 </span></a>
+								</li>
+							</ul>
+					</li>		
+							
+					
 					<li ui-sref="guideManagement"><a href="#"><i
 							class="glyphicon glyphicon-user"></i><span class="pull-center">人员管理</span>
 					</a></li>

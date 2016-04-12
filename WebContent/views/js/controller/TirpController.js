@@ -16,58 +16,16 @@ App.controller('addTripController', ["$scope", "$uibModal", "$http",'$state','gu
                                   function ($scope, $uibModal, $http, $state, guides, TripService,localPartner) {
 	$scope.trip={
 			id:'',
-			contact:'',
-			phone:'',
-			email:'',
-			name:'',
-			num_people:'',
-			overtime_payment_type:'',
-			start_date:'',
-			overtime_rate:'',
-			end_date:'',
-			disable_account:"",
-			startpartnercompanyid:'',
-			startpartnercompanyname:'',
-			localPartnercompanyid:'',
-			localPartnercompanyname:'',
-			startpartnercompanyopid:'',
-			startpartnercompanyopname:'',
 			status:'',
-			localPartnercompanyopid:'',
-			localPartnercompanyopname:'',
-			partner_team_id:''
-	}
-	$scope.localPartner = localPartner;
-	$scope.guides =guides;
-	/*//generate a array containing the people belongs our company. 
-	$scope.myGuides = [];
-	for(var i=0; i<$scope.guides.length; i++){
-		//alert(JSON.stringify());
-		if($scope.guides[i].companyid==$scope.trip.contact){
-			$scope.myGuides.push($scope.guides[i]);
-		}
-	}*/
-	var mycompanyID;
-	//update phone number value according the choice of the op
-	$scope.updatePhone = function(){
-		
-		for(var i=0; i<$scope.guides.length; i++){
-			//alert(JSON.stringify());
-			if($scope.guides[i].id==$scope.trip.contact){
-				$scope.trip.phone = $scope.guides[i].phone;
-				mycompanyID = $scope.guides[i].id;
-			}
-		}
+			upper_op:'',
+			tour_name:'',
+			num_people:'',
+			start_date:'',
+			start_Loc:'',
+			end_date:'',
+			end_Loc:''
 	};
 	
-	//start company 
-	$scope.localguides =[];
-	$scope.localcompany =[];
-	for(var i=0; i<$scope.localPartner.length; i++){
-		if($scope.localPartner[i].id!=$scope.mycompanyID){
-			$scope.localcompany.push($scope.localPartner[i]);
-		}
-	}
 	
 	$scope.updateLocalOP = function(){
 		//alert(JSON.stringify($scope.trip.startpartnercompanyid));
