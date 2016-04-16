@@ -17,6 +17,7 @@ public class Trip {
 	
 	@Column(length = 45)
 	private String UpperOP;
+<<<<<<< HEAD
 	
 	
 	@Column(length = 45)
@@ -34,6 +35,35 @@ public class Trip {
 	@Column(length = 45)
 	private String Tripcol;
 
+=======
+	
+	@Column(length = 45)
+	private String TourName;
+	
+	@Column(length = 45)
+	private String PeopleNumber;
+	
+	@Column(length = 45)
+	private String StartDate;
+	
+	@Column(length = 45)
+	private String EndDate;
+	
+	@Column(length = 45)
+	private String StartLoc;
+	
+	@Column(length = 45)
+	private String Tripcol;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+>>>>>>> origin/master
 	public String getStatus() {
 		return Status;
 	}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.web;
 
 import javax.annotation.Resource;
@@ -13,3 +14,20 @@ public class LocationController {
 	
 	
 }
+=======
+package com.web;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+
+import com.manager.LocationManager;
+
+@Controller
+public class LocationController {
+	@Resource(name = "locationManager")
+	private LocationManager locationManager;
+	
+	
+}
+>>>>>>> origin/master

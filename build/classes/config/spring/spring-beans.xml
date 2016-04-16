@@ -33,6 +33,10 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<bean id="tripstepDao" class="com.dao.impl.TripstepDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	
+	<bean id="locationDao" class="com.dao.impl.LocationDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 
 
 	<!-- manager -->
@@ -56,6 +60,9 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 	</bean>
 	<bean id="tripstepManagerBase" class="com.manager.impl.TripstepManagerImpl">
 		<property name="tripstepDao" ref="tripstepDao"></property>
+	</bean>
+	<bean id="locationManagerBase" class="com.manager.impl.LocationManagerImpl">
+		<property name="locationDao" ref="locationDao"></property>
 	</bean>
 
 
@@ -84,5 +91,9 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 	</bean>
 	<bean name="tripstepManager" parent="transactionProxy">
 		<property name="target" ref="tripstepManagerBase"></property>
+	</bean>
+	
+	<bean name="locationManager" parent="transactionProxy">
+		<property name="target" ref="locationManagerBase"></property>
 	</bean>
 </beans>
