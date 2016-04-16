@@ -18,8 +18,7 @@
 <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="views/js/bootstrap.min.js"></script>
 <script src="views/js/router/indexrouter.js"></script>
-<script src="views/js/handsontable.full.js"></script>
-<script src="views/js/ngHandsontable.js"></script>
+<script src="http://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.js"></script>
 
 
 <!-- controllers -->
@@ -30,7 +29,9 @@
 
 <!-- services -->
 <script src="views/js/service/TripService.js"></script>
-
+<script src="views/js/service/VehicleService.js"></script>
+<script src="views/js/service/PartnerCompanyService.js"></script>
+<script src="views/js/service/GuideService.js"></script>
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

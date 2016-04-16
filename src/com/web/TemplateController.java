@@ -12,7 +12,7 @@ public class TemplateController {
 	 @RequestMapping(value="/listTrip")
 	 public String getTrips(){
 		 System.out.println("test");
-		 return "views/page-trips/list";
+		 return "views/page-trips/trip";
 	 }
 	 
 	 @RequestMapping(value="/addTrip")

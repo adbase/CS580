@@ -8,16 +8,26 @@
 <link type="text/css" href="views/css/bootstrap.min.css"
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="views/css/index.css">
+<link rel="stylesheet"  type="text/css" href="views/css/handsontable.full.min.css">
+
 <script src="views/js/angular.js"></script>
 <script src="views/js/angular-ui-router.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-resource.js"></script>
+<script src="views/js/ui-bootstrap-tpls.js"></script>
 <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="views/js/bootstrap.min.js"></script>
-<script src="views/js/bootstrap-datetimepicker.min.js"></script>
 <script src="views/js/router/t1.js"></script>
+<script src="views/js/handsontable.full.js"></script>
+<script src="views/js/ngHandsontable.js"></script>
+
+
+<!-- controllers -->
 <script src="views/js/controller/t1Controller.js"></script>
-<script src="views/js/service/t1service.js"></script>
-<script src="views/js/ui-bootstrap-tpls.js"></script>
+
+
+<!-- services -->
+<script src="views/js/service/TripService.js"></script>
+
+
 
 </head>
 <body>

@@ -1,12 +1,11 @@
-package com.dao;
+package com.manager;
 
 import java.util.List;
 
 import com.entity.Location;
 
-public interface LocationDao {
-
-	public void addLocation(Location loc);
+public interface LocationManager {
+public void addLocation(Location loc);
 	
 	public List<Location> queryAll();
 	
@@ -17,6 +16,4 @@ public interface LocationDao {
 	public void update(Location loc);
 	
 	public void delete(Location loc);
-	
-	
 }

@@ -2,7 +2,7 @@
  * Danqing Zhao
  */
 
-var App = angular.module("myApp", ['ui.router','ui.bootstrap']);
+var App = angular.module("myApp", ['ui.router','ui.bootstrap','ngHandsontable']);
 
 App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	

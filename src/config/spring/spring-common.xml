@@ -63,6 +63,7 @@
 				<value>com.entity.Vehicle</value>
 				<value>com.entity.Guide</value>
 				<value>com.entity.Tripstep</value>
+				<value>com.entity.Location</value>
 			</list>
 		</property>
 	</bean>
